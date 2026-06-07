@@ -1,0 +1,586 @@
+/* ==========================================
+   1. VARIABLES DE CONTROL CENTRAL (:root)
+   ========================================= */
+:root {
+    /* Paleta de Colores Principales */
+    --color-texto-oscuro: #000000;
+    --color-texto-gris: #4a4a4a;
+    --color-texto-azul: #2c3e50;
+    --color-link-hover: #0921fd;
+    --fondo-tarjetas: rgba(255, 255, 255, 0.75);
+    --fondo-secciones: rgba(255, 255, 255, 0.6);
+
+    /* Botones de Contacto y WhatsApp */
+    --verde-whatsapp: #22c55e;
+    --verde-whatsapp-hover: #16a34a;
+    --verde-wa-flotante: #25d366;
+    --rosa-instagram: #e11da6;
+    --rosa-instagram-hover: #7c1359;
+
+    /* Configuraciones de la Ventana Emergente (Modal) */
+    --modal-backdrop: rgba(0, 0, 0, 0.85);
+    --modal-sombra: 0 20px 50px rgba(0, 0, 0, 0.5);
+
+    /* Estilos Estructurales Reutilizables */
+    --radio-borde-grande: 20px;
+    --radio-borde-suave: 12px;
+    --radio-borde-botones: 10px;
+    --blur-esmerilado: blur(10px);
+    --blur-suave: blur(8px);
+}
+
+/* ==========================================
+   2. ESTILOS GLOBALES Y ANIMACIONES
+   ========================================== */
+body {
+    animation: transicionPagina 0.5s ease-out;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-texto-oscuro);
+    text-align: center;
+    background: none;
+    background-image: url('img/fondo2.png'); 
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    background-attachment: fixed; 
+    background-position: center; 
+    background-attachment: fixed;
+}
+
+@media (max-wigth: 1000){
+  body{
+    background-attachment: scroll;
+    background-size: 100% 100vh;
+  }
+}
+/*resaltar parrafos*/
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+
+@keyframes transicionPagina {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================
+   3. ENCABEZADO (HEADER, MENÚ Y BANNER)
+   ========================================== */
+header {
+    background-color: #ffffff;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.encabezado-banner {
+    background-image: url('img/banner2.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    color: #ffffff; 
+}
+
+.logo-titulo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    height: 120px; 
+    width: auto;
+}
+
+.texto-cabecera h1 {
+    color: #ffffff; 
+    margin: 0;
+    font-size: 24px;
+}
+
+.texto-cabecera p {
+    margin: 5px 0 0 0;
+    font-size: 14px;
+    color: #e2e8f0; 
+}
+
+/* Menús de Navegación */
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 15px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-texto-oscuro);
+    font-weight: bold; /* Corregido 'front-weight' */
+    transition: color 0.3s ease, border-color 0.3s ease;
+    padding-bottom: 5px;
+}
+
+nav a:hover {
+    border-bottom: 2px solid var(--color-texto-oscuro);
+    color: var(--color-link-hover);
+}
+
+.menu-navegacion a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #000000;
+    padding: 8px 16px;          
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    border-radius: 6px;         
+    margin-left: 15px;
+    transition: all 0.3s ease;
+
+}
+
+.menu-navegacion a:hover {
+    background-color: #ffffff;  
+    color: #1e293b;             
+    border-color: #ffffff;
+}
+
+/* ==========================================
+   4. ESTRUCTURA DE SECCIONES Y CONTENIDOS
+   ========================================== */
+section {
+    padding: 10px 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: var(--fondo-secciones);
+    border-radius: var(--radio-borde-grande);
+    box-shadow: 0 2px 4px rgba(5, 5, 5, 0.05);
+    backdrop-filter: var(--blur-suave);
+}
+
+ul {
+    display: inline-table;
+    text-align: left;
+    padding: 0 0 0 20px; 
+    font-size: 20px;
+    line-height: 2;
+}
+
+.tarjeta-premium {
+    background-color: var(--fondo-tarjetas);
+    border-radius: var(--radio-borde-grande);
+    padding: 40px 20px;
+    max-width: 850px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: var(--blur-esmerilado);
+}
+
+.tarjeta-premium h2 {
+  font-size: 28px;
+  color: #1a1a1a;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.tarjeta-premium .subtitulo {
+    font-size: 16px;
+    color: var(--color-texto-gris);
+    margin-bottom: 30px;
+}
+
+#zona {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-texto-azul);
+    margin-top: 35px;
+    text-align: center;
+}
+
+
+
+/* ==========================================
+   5. CARPETAS DESPLEGABLES (<details> y <summary>)
+   ========================================== */
+.carpeta-desplegable {
+    background-color: #ffffff;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 1000px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.carpeta-desplegable summary {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: #ffffff;
+    color: var(--color-texto-oscuro);
+    cursor: pointer;
+    list-style: none;
+    transition: background-color 0.2s ease, color 0.2s ease; /* Corregido 'o.2s' */
+    text-align: center;
+}
+
+.carpeta-desplegable summary::-webkit-details-marker {
+    display: none;
+}
+
+.carpeta-desplegable summary:hover {
+    background-color: #000000;
+    color: #ffffff;
+}
+
+.carpeta-desplegable[open] {
+    padding-bottom: 10px;
+}
+
+/* Animación al abrir la carpeta */
+.carpeta-desplegable[open] .contenedor-galeria {
+    animation: aparecerSuave 0.6s ease-out;
+}
+
+@keyframes aparecerSuave {
+    from {
+        opacity: 0;                
+        transform: translateY(-10px); 
+    }
+    to {
+        opacity: 1;                
+        transform: translateY(0);    
+    }
+}
+
+/* ==========================================
+   6. SECCIÓN DE CONTACTO (BOTONES INTERACTIVOS)
+   ========================================== */
+.contenedor-botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 15px 25px;
+    border-radius: var(--radio-borde-botones); 
+    transition: all 0.3s ease; 
+    text-align: center;
+}
+
+.btn:active, 
+.botones-contacto .enlace-contacto:active {
+    transform: scale(0.98); 
+}
+
+.btn-whatsapp {
+    background-color: var(--verde-whatsapp);
+    color: #ffffff;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--verde-whatsapp-hover);
+    transform: translateY(-2px);
+}
+
+.btn-instagram {
+    background-color: var(--rosa-instagram);
+    color: #ffffff;
+}
+
+.btn-instagram:hover {
+    background-color: var(--rosa-instagram-hover);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   7. CUADRÍCULA DE GALERÍA Y VISOR MODAL
+   ========================================== */
+.contenedor-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.contenedor-galeria .bloque-foto {
+    width: 100%;
+}
+
+.contenedor-galeria .bloque-foto > img {
+    width: 100%;
+    height: 250px;     
+    object-fit: cover; 
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.contenedor-galeria img:hover {
+    transform: scale(0.95); 
+    cursor: pointer;
+}
+
+/* Ventana Emergente de la Galería Nítida */
+.ventana-modal {
+    border: none;
+    background: transparent; 
+    padding: 0;              
+    max-width: 85vw;
+    max-height: 85vh;
+    overflow: visible;       
+}
+
+.ventana-modal img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: var(--radio-borde-suave);     
+    box-shadow: var(--modal-sombra); 
+    display: block;
+    cursor: default;
+    user-select: none;
+    pointer-events: none;
+}
+
+.ventana-modal::backdrop {
+    background-color: var(--modal-backdrop); 
+    backdrop-filter: var(--blur-suave);            
+}
+
+/* Botón Circular Flotante (X) para Cerrar */
+.ventana-modal button {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    background-color: #ffffff;
+    color: #1e293b;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;       
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.ventana-modal button:hover {
+    background-color: #f1f5f9;
+    transform: scale(1.1);    
+}
+
+/* ==========================================
+   8. COMPONENTE: MENÚ DE WHATSAPP FLOTANTE
+   ========================================== */
+.menu-whatsapp-flotante {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.boton-principal-wa {
+    background-color: var(--verde-wa-flotante);
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Corregido error de coma extra */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.opciones-pintores {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+}
+
+.opciones-pintores a {
+    text-decoration: none;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border-left: 4px solid var(--verde-wa-flotante); 
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+}
+
+.opciones-pintores a:hover {
+    background-color: #f1f2f6;
+}
+
+.menu-whatsapp-flotante:hover .opciones-pintores {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-whatsapp-flotante:hover .boton-principal-wa {
+    transform: scale(1.05);
+}
+
+/* ==========================================
+   9. MENÚ RESPONSIVE (Checkbox Hack)
+   ========================================== */
+
+/* Escondemos la casilla y el botón por defecto en computadoras */
+.check-oculto,
+.boton-menu-movil {
+  display: none;
+}
+
+/* CONFIGURACIÓN PARA CELULARES (Menos de 768px) */
+@media (max-width: 1000px) {
+  
+  header.encabezado-banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /* Clave para que el botón de tres líneas no flote mal */
+  }
+
+  .logo-titulo{
+    max-width: 75%;
+  }
+
+  .logo{
+    height: 18px;
+  }
+
+  .texto-cabecera p{
+    display: none;
+    display: none !important;
+  }
+
+  /* Hacemos visible el botón de las tres líneas */
+  .boton-menu-movil {
+    z-index: 1200 !important;
+    display: block;
+    background: transparent;
+    color: #ffffff; /* Blanco para resaltar en tu banner */
+    font-size: 50px;
+    padding: 15px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 1100;
+    user-select: none;
+  }
+
+  /* Estructura de la lista vertical oculta */
+  .menu-navegacion {
+    justify-content: center;
+    padding-top: 0 !important;
+    display: flex;
+    flex-direction: column; 
+    position: fixed;
+    top: 0;
+    right: -100%;        /* Sigue oculto por defecto */
+    width: 50%;          /* Ocupa un poco más de la mitad para que no sature tanto */
+    height: 30vh; 
+    background-color: rgba(0, 0, 0, 0.98); /* Un tono azul oscuro noche más premium que el negro puro */
+    backdrop-filter: blur(100px);
+    padding-top: 80px;   /* Bajamos un toque el espacio de arriba */
+    gap: 25px;           /* Reducimos la distancia entre botones */
+    align-items: center;
+    transition: right 0.80s cubic-bezier(0.4, 0, 0.2, 1); /* Animación de deslizamiento más fluida y natural */
+    z-index: 1050;
+    box-shadow: -5px 0 25px rgba(0, 0, 0, 0.3); /* Sombra elegante a la izquierda para dar profundidad */
+  }
+
+  /* Botones internos del menú móvil */
+  .menu-navegacion a {
+    margin-left: 0 !important; 
+    width: 80%; 
+    text-align: center;
+    font-size: 20px;     /* Bajamos un cachito la letra para celulares */
+    padding: 40px 0;
+    color: #ffffff !important;
+    background: rgb(61, 2, 2) !important; /* Eliminamos cualquier color de fondo viejo */
+    border: 1px solid rgba(231, 219, 219, 0.2) !important; /* Línea blanca fina y sutil alrededor */
+    border-radius: 8px !important;
+    transition: all 0.2s ease;
+  }
+
+    /* Efecto al tocar el botón en el celular */
+    .menu-navegacion a:hover,
+    .menu-navegacion a:active {
+    background-color: rgba(41, 40, 40, 0.1) !important; /* Iluminación suave al presionarlo */
+    border-color: #ffffff !important;
+  }
+    /* Arreglo para que el logo y el texto no se choquen en pantallas chicas */
+  header.encabezado-banner {
+    padding: 10px 15px !important; /* Achicamos los márgenes laterales del banner */
+  }
+
+  .logo-titulo {
+    gap: 10px !important; /* Menos espacio entre logo y texto */
+  }
+
+  .logo {
+    height: 100px !important; /* Hacemos el logo un toque más petiso en móviles */
+  }
+
+  .texto-cabecera h1 {
+    font-size: 18px !important;
+  }
+
+  .texto-cabecera p {
+    font-size: 11px !important; /* Letra bien chiquita para que entre en una sola línea */
+    white-space: nowrap;        /* Fuerza a que el eslogan se quede en una sola línea y no se quiebre */
+  }
+  /*
+     Cuando la casilla invisible se marca (:checked), 
+     buscamos al hermano de abajo (~ .menu-navegacion) y lo traemos a la pantalla */
+  .check-oculto:checked ~ .menu-navegacion {
+    right: 0;
+  }
+
+  /* TRUCO EXTRA MINIMALISTA: Cambia el icono de ☰ a una ✕ al abrirse */
+  .check-oculto:checked ~ .boton-menu-movil {
+    color: #ef4444;
+    transform: rotate(90deg);
+    
+  }
+}

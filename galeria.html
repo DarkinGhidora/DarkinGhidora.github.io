@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <title>Galeria</title>
+</head>
+<body>
+
+    <header class="encabezado-banner">
+        <div class="logo-titulo">
+            <a href="index.html">
+                <img src="img/Logo.png" alt="Logo de la empresa" width="150" class="logo">
+            </a>
+
+            <div class="textos-cabecera">
+                <h1>E&A Pintores</h1>
+                <p class="eslogan">Transformamos tu espacio con color y calidad</p>
+            </div>
+        </div>
+        
+        <input type="checkbox" id="menu-check" class="check-oculto">
+        <label for="menu-check" class="boton-menu-movil">☰</label>
+
+
+        <nav class="menu-navegacion">
+            <a href="index.html">INICIO</a>
+            <a href="galeria.html">GALERIA</a>
+            <a href="contacto.html">CONTACTO</a>
+        </nav>
+    </header>
+
+
+    <section>
+        <h2>Nuestros Trabajos Realizados</h2>
+        <p>Mira los resultados de nuestros proyectos más recientes:</p>
+    </section>
+    <section id="galeria">
+
+        <details class="carpeta-desplegable">
+
+            <summary>EXTERIOR</summary>
+
+            <div class="contenedor-galeria">
+                    <div class="bloque-foto">
+                    <!--Miniatura de la galeria-->
+                    <img src="img/casa1.jpeg" alt="Interior de sala pintada" onclick="this.nextElementSibling.showModal()">
+                    
+                    <!--cuadro emergente-->
+                    <dialog class="ventana-modal">
+                        <img src="img/casa1.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/casa2.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/casa2.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+                <div class="bloque-foto">
+                    <img src="img/casa3.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/casa3.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/casa4.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/casa4.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/casa5.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/casa5.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+            </div>
+        </details>
+
+    
+    </section>
+
+
+    <section id="galeria">
+        <details class="carpeta-desplegable">
+
+            <summary>MADERA</summary>
+
+            <div class="contenedor-galeria">
+
+                <div class="bloque-foto">
+                    <img src="img/porton 1.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/porton 1.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/puerta HD.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/puerta HD.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+                <div class="bloque-foto">
+                    <img src="img/techo.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/techo.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/perciana HD.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/perciana HD.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera1.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera1.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera2.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera2.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera3.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera3.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera4.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera4.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera5.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera5.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera6.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera6.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/madera7.webp" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/madera7.webp" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <section id="galeria">
+        <details class="carpeta-desplegable">
+            <summary>INTERIOR</summary>
+            <div class="contenedor-galeria">
+
+                <div class="bloque-foto">
+                    <img src="img/1.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/1.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/2.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/2.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/3.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/3.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/5.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/5.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/8.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/8.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/9.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/9.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 2.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 2.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 3.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 3.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 4.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 4.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 5.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 5.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 6.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 6.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 7.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 7.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior 8.jpg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior 8.jpg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior9.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior9.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interioro10.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interioro10.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior11.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior11.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior12.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior12.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+
+                <div class="bloque-foto">
+                    <img src="img/interior13.jpeg" alt="" onclick="this.nextElementSibling.showModal()">
+
+                    <dialog class="ventana-modal">
+                        <img src="img/interior13.jpeg" alt="">
+                        <button onclick="this.parentElement.close()">✕</button>
+                    </dialog>
+                </div>
+            </div>
+        </details>
+    </section>
+
+    <div class="menu-whatsapp-flotante">
+
+        <div class="opciones-pintores">
+            <a href="https://wa.me/5491165573177" target="_blank" class="link-eduardo">Eduardo Benitez</a>
+            <a href="https://wa.me/5491126531909" target="_blank" class="link-alejandro">Aleandro Rios</a>
+
+        </div>
+        <div class="boton-principal-wa">
+                💬 Presupuestos
+        </div>
+    </div>
+</body>
+</html>
