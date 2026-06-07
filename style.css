@@ -81,7 +81,7 @@ header {
 }
 
 .encabezado-banner {
-    background-image: url('img/banner3.png');
+    background-image: url('img/banner2.png');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -140,11 +140,11 @@ nav a:hover {
     text-decoration: none;
     font-weight: bold;
     font-size: 14px;
-    background-color: #000000;
+    background-color: #2f5997;
     padding: 8px 16px;          
     border: 1px solid rgba(255, 255, 255, 0.4); 
-    border-radius: 6px;         
-    margin-left: 15px;
+    border-radius: 10px;         
+    margin-left: 1px;
     transition: all 0.3s ease;
 
 }
@@ -477,6 +477,76 @@ ul {
     position: relative; /* Clave para que el botón de tres líneas no flote mal */
   }
 
+    .encabezado-banner {
+        background-image: url('img/banner3.png');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 40px 30px;
+    }
+
+    .menu-whatsapp-flotante {
+        position: fixed;
+        bottom: 25px;
+        right: 25px;
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .boton-principal-wa {
+        background-color: var(--verde-wa-flotante);
+        color: white;
+        padding: 30px 40px;
+        border-radius: 30px;
+        font-weight: bold;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Corregido error de coma extra */
+        cursor: pointer;
+        transition: transform 0.2s ease;
+    }
+
+    .opciones-pintores {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+
+    .opciones-pintores a {
+        text-decoration: none;
+        background-color: #ffffff;
+        color: #333333;
+        padding: 40px 30px;
+        border-radius: 10px;
+        font-size: 14px;
+        font-weight: bold;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        border-left: 4px solid var(--verde-wa-flotante); 
+        white-space: nowrap;
+        transition: background-color 0.2s ease;
+    }
+
+    .opciones-pintores a:hover {
+        background-color: #25d366;
+    }
+
+    .menu-whatsapp-flotante:hover .opciones-pintores {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .menu-whatsapp-flotante:hover .boton-principal-wa {
+        transform: scale(1.05);
+    }
+
   .logo-titulo{
     max-width: 100%;
   }
@@ -495,7 +565,7 @@ ul {
     z-index: 1200 !important;
     display: block;
     background: transparent;
-    color: #ffffff; /* Blanco para resaltar en tu banner */
+    color: #ffffff; 
     font-size: 50px;
     padding: 15px;
     cursor: pointer;
@@ -509,15 +579,15 @@ ul {
     justify-content: center;
     padding-top: 0 !important;
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
     position: fixed;
     top: 0;
     right: -100%;        /* Sigue oculto por defecto */
-    width: 50%;          /* Ocupa un poco más de la mitad para que no sature tanto */
-    height: 30vh; 
+    width: 100%;          /* Ocupa un poco más de la mitad para que no sature tanto */
+    height: 7vh; 
     background-color: rgba(0, 0, 0, 0.98); /* Un tono azul oscuro noche más premium que el negro puro */
     backdrop-filter: blur(100px);
-    padding-top: 80px;   /* Bajamos un toque el espacio de arriba */
+    padding-top: 100px;   /* Bajamos un toque el espacio de arriba */
     gap: 25px;           /* Reducimos la distancia entre botones */
     align-items: center;
     transition: right 0.80s cubic-bezier(0.4, 0, 0.2, 1); /* Animación de deslizamiento más fluida y natural */
@@ -528,10 +598,10 @@ ul {
   /* Botones internos del menú móvil */
   .menu-navegacion a {
     margin-left: 0 !important; 
-    width: 80%; 
+    width: 25%; 
     text-align: center;
     font-size: 20px;     /* Bajamos un cachito la letra para celulares */
-    padding: 40px 0;
+    padding: 20px 0;
     color: #ffffff !important;
     background: rgb(61, 2, 2) !important; /* Eliminamos cualquier color de fondo viejo */
     border: 1px solid rgba(231, 219, 219, 0.2) !important; /* Línea blanca fina y sutil alrededor */
