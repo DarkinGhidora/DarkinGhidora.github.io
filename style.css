@@ -48,12 +48,8 @@ body {
     background-attachment: fixed;
 }
 
-@media (max-wigth: 1000){
-  body{
-    background-attachment: scroll;
-    background-size: 100% 100vh;
-  }
-}
+
+
 /*resaltar parrafos*/
 p {
     font-size: 25px;
@@ -85,13 +81,13 @@ header {
 }
 
 .encabezado-banner {
-    background-image: url('img/banner2.png');
+    background-image: url('img/banner3.png');
     background-size: cover;
     background-position: center;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 40px 50px;
     color: #ffffff; 
 }
 
@@ -102,17 +98,17 @@ header {
 }
 
 .logo {
-    height: 120px; 
+    height: 120px !important;
     width: auto;
 }
 
-.texto-cabecera h1 {
+.textos-cabecera h1 {
     color: #ffffff; 
     margin: 0;
-    font-size: 24px;
+    font-size: 24px !important;
 }
 
-.texto-cabecera p {
+.textos-cabecera p {
     margin: 5px 0 0 0;
     font-size: 14px;
     color: #e2e8f0; 
@@ -482,16 +478,16 @@ ul {
   }
 
   .logo-titulo{
-    max-width: 75%;
+    max-width: 100%;
   }
 
   .logo{
-    height: 18px;
+    height: 30px;
   }
 
-  .texto-cabecera p{
-    display: none;
-    display: none !important;
+  .textos-cabecera p{
+    display: block !important;
+    font-size: 18px !important;
   }
 
   /* Hacemos visible el botón de las tres líneas */
@@ -562,14 +558,13 @@ ul {
     height: 100px !important; /* Hacemos el logo un toque más petiso en móviles */
   }
 
-  .texto-cabecera h1 {
+  .textos-cabecera h1 {
     font-size: 18px !important;
   }
+  
 
-  .texto-cabecera p {
-    font-size: 11px !important; /* Letra bien chiquita para que entre en una sola línea */
-    white-space: nowrap;        /* Fuerza a que el eslogan se quede en una sola línea y no se quiebre */
-  }
+
+
   /*
      Cuando la casilla invisible se marca (:checked), 
      buscamos al hermano de abajo (~ .menu-navegacion) y lo traemos a la pantalla */
@@ -584,3 +579,5 @@ ul {
     
   }
 }
+
+
