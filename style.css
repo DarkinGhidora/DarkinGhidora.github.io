@@ -952,6 +952,11 @@ ul {
 
 /* CONFIGURACIÓN PARA CELULARES (Menos de 768px) */
 @media (max-width: 1000px) {
+    p {
+        font-size: 17px;
+        line-height: 1.55;
+    }
+
     .hero-home {
         grid-template-columns: 1fr;
         padding: 22px;
@@ -963,11 +968,11 @@ ul {
     }
 
     .hero-home h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .hero-texto {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     .hero-acciones .btn {
@@ -983,6 +988,17 @@ ul {
         grid-template-columns: 1fr;
     }
 
+    .beneficio-card h3,
+    .proceso-card h3 {
+        font-size: 17px;
+    }
+
+    .beneficio-card p,
+    .proceso-card p,
+    .hero-card p {
+        font-size: 15px;
+    }
+
     .proceso-grid {
         grid-template-columns: 1fr;
     }
@@ -991,6 +1007,10 @@ ul {
         grid-template-columns: 1fr;
         padding: 22px;
         border-radius: 22px;
+    }
+
+    .contacto-hero h2 {
+        font-size: 24px;
     }
 
     .contacto-principal .btn {
@@ -1004,6 +1024,40 @@ ul {
 
     .contacto-lista {
         font-size: 15px;
+    }
+
+    .seccion-destacada h1,
+    .seccion-proceso h1,
+    section h1,
+    .galeria-hero h2,
+    .galeria-intro h2 {
+        font-size: 22px;
+    }
+
+    .textos-cabecera h1 {
+        font-size: 16px !important;
+        line-height: 1.15;
+    }
+
+    .textos-cabecera p {
+        display: block !important;
+        font-size: 12px !important;
+    }
+
+    .menu-navegacion a {
+        font-size: 13px;
+        padding: 12px 14px;
+    }
+
+    .footer-bloque p,
+    .footer-link {
+        font-size: 14px;
+    }
+
+    section ul,
+    ul {
+        font-size: 16px;
+        line-height: 1.7;
     }
 
     .footer-contacto {
@@ -1040,16 +1094,6 @@ ul {
 
     .logo {
         height: 64px !important;
-    }
-
-    .textos-cabecera h1 {
-        font-size: 17px !important;
-        line-height: 1.15;
-    }
-
-    .textos-cabecera p {
-        display: block !important;
-        font-size: 13px !important;
     }
 
     .boton-menu-movil {
