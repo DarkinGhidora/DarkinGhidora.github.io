@@ -29,6 +29,17 @@
     --blur-suave: blur(8px);
 }
 
+/* Reset box-sizing y ajustes base */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 /* ==========================================
    2. ESTILOS GLOBALES Y ANIMACIONES
    ========================================== */
@@ -39,12 +50,12 @@ body {
     padding: 0;
     color: var(--color-texto-oscuro);
     text-align: center;
+    line-height: 1.45;
     background: none;
-    background-image: url('img/fondo2.png'); 
-    background-repeat: no-repeat; 
-    background-size: cover; 
-    background-attachment: fixed; 
-    background-position: center; 
+    background-image: url('img/fondo2.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -54,6 +65,14 @@ body {
 p {
     font-size: 25px;
     line-height: 1.6;
+}
+
+/* Foco accesible para teclado */
+a:focus-visible,
+.btn:focus-visible,
+.bloque-foto:focus-visible {
+    outline: 3px solid rgba(47, 89, 151, 0.18);
+    outline-offset: 3px;
 }
 
 
@@ -754,7 +773,7 @@ ul {
    ========================================== */
 .contenedor-galeria {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 18px;
     padding: 22px 18px 8px;
 }
@@ -874,6 +893,13 @@ ul {
 
     .contenedor-galeria .bloque-foto > img {
         height: 100%;
+    }
+}
+
+/* Punto intermedio: de 1200px hacia abajo usar 2 columnas */
+@media (max-width: 1200px) {
+    .contenedor-galeria {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
 
