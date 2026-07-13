@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <link rel="stylesheet" href="style.css">
     <title>Galeria</title>
@@ -29,12 +29,39 @@
         </nav>
     </header>
 
+    <section class="galeria-hero">
+        <div class="galeria-hero-texto">
+            <p class="galeria-kicker">Trabajos reales</p>
+            <h2>Una muestra clara de cómo dejamos cada obra: prolija, limpia y bien terminada.</h2>
+            <p>Acá podés recorrer algunos de nuestros trabajos en exterior, madera e interior. Tocá cada imagen para verla en grande.</p>
+            <div class="hero-acciones hero-acciones-galeria">
+                <a href="contacto.html" class="btn btn-whatsapp">Pedir presupuesto</a>
+                <a href="index.html" class="btn btn-volver-inicio">Volver al inicio</a>
+            </div>
+        </div>
 
-    <section>
+        <div class="galeria-resumenes">
+            <article class="galeria-resumen-card">
+                <span>Exterior</span>
+                <p>Fachadas, frentes y terminaciones pensadas para durar.</p>
+            </article>
+            <article class="galeria-resumen-card">
+                <span>Madera</span>
+                <p>Puertas, portones y detalles con acabado parejo y prolijo.</p>
+            </article>
+            <article class="galeria-resumen-card">
+                <span>Interior</span>
+                <p>Ambientes más limpios, más claros y con mejor presencia.</p>
+            </article>
+        </div>
+    </section>
+
+
+    <section class="galeria-intro">
         <h2>Nuestros Trabajos Realizados</h2>
         <p>Mira los resultados de nuestros proyectos más recientes:</p>
     </section>
-    <section id="galeria">
+    <section class="galeria-seccion">
 
         <details class="carpeta-desplegable">
 
@@ -93,7 +120,7 @@
     </section>
 
 
-    <section id="galeria">
+    <section class="galeria-seccion">
         <details class="carpeta-desplegable">
 
             <summary>MADERA</summary>
@@ -201,7 +228,7 @@
         </details>
     </section>
 
-    <section id="galeria">
+    <section class="galeria-seccion">
         <details class="carpeta-desplegable">
             <summary>INTERIOR</summary>
             <div class="contenedor-galeria">
@@ -382,5 +409,76 @@
                 💬 Presupuestos
         </div>
     </div>
+
+    <footer class="footer-contacto">
+        <div class="footer-bloque">
+            <p class="footer-titulo">Horarios</p>
+            <p>Lunes a sábado</p>
+            <p>Consultas y presupuestos por WhatsApp</p>
+        </div>
+        <div class="footer-bloque">
+            <p class="footer-titulo">Zona de trabajo</p>
+            <p>Zona norte y CABA</p>
+            <p>También coordinamos trabajos en alrededores</p>
+        </div>
+        <div class="footer-bloque">
+            <p class="footer-titulo">Contacto</p>
+            <p><a href="https://wa.me/5491165573177" target="_blank" rel="noopener noreferrer" class="footer-link">Eduardo: 11 6557-3177</a></p>
+            <p><a href="https://wa.me/5491126531909" target="_blank" rel="noopener noreferrer" class="footer-link">Alejandro: 11 2653-1909</a></p>
+            <p><a href="https://mail.google.com/mail/?view=cm&fs=1&to=eapintores44@gmail.com" target="_blank" rel="noopener noreferrer" class="footer-link">Enviar Gmail</a></p>
+            <p><a href="https://instagram.com/eya_pintores_/" target="_blank" rel="noopener noreferrer" class="footer-link">Instagram</a></p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.bloque-foto').forEach((bloque, index) => {
+            const imagen = bloque.querySelector('img');
+            const dialogo = bloque.querySelector('dialog');
+            const tituloCategoria = bloque.closest('details')?.querySelector('summary')?.textContent?.trim() || 'Galería';
+            const descripcionBase = imagen?.getAttribute('alt')?.trim();
+            const etiquetaAccesible = descripcionBase && descripcionBase.length > 0
+                ? descripcionBase
+                : `${tituloCategoria} - foto ${index + 1}`;
+
+            bloque.tabIndex = 0;
+            bloque.setAttribute('role', 'button');
+            bloque.setAttribute('aria-label', `Abrir ${etiquetaAccesible}`);
+            imagen.loading = 'lazy';
+            imagen.decoding = 'async';
+
+            if (imagen && (!descripcionBase || descripcionBase.length === 0)) {
+                imagen.alt = etiquetaAccesible;
+            }
+
+            const abrirDialogo = () => {
+                if (dialogo && !dialogo.open) {
+                    dialogo.showModal();
+                }
+            };
+
+            bloque.addEventListener('click', abrirDialogo);
+            bloque.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    abrirDialogo();
+                }
+            });
+
+            const botonCerrar = dialogo?.querySelector('button');
+
+            botonCerrar?.addEventListener('click', (event) => {
+                event.preventDefault();
+                event.stopPropagation();
+                dialogo.close();
+            });
+
+            dialogo?.addEventListener('click', (event) => {
+                event.stopPropagation();
+                if (event.target === dialogo) {
+                    dialogo.close();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
